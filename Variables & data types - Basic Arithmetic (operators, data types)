@@ -1,1 +1,199 @@
+// Aaron Jones - Variable Worksheet
 
+// C++ Def'n: C++ is coding language used to build software for things like video games, OS' and databases.
+    
+// Beginning to Code
+
+#include <iostream>
+// (above) handles input/output
+using namespace std;
+//  (above) lets us use names for objects and variables from the standard library
+
+int main() {
+    // above we use int because the return expects an int value
+    cout << "Hello, World!";
+    // above cout refers to character output and the "<<" is used to direct what you want to say
+    return 0;
+    //returning 0 signifies that the program has ended properly
+}
+
+// this is the format you use for all of your code in C++, if you want your code to function it must be inside of this int main with return 0
+
+// How to comment on C++
+// You use ""//" for single line comments (double forward slashes)
+// You use /* */ for multi line comments (forward slash then an asterisk and an asterisk then a forward slash)
+
+// Syntax in C++
+// C++ uses curly braces -> {} <- for blocks of code. Python uses indentation
+// C++ also needs semicolons -> ; <- to end statements (unlike python)
+// Ex:
+
+if (condition) {
+    cout << "Condition is true"; // This line is inside the if-statement.
+}
+cout << "Outside if-statement";
+
+// Variables in main
+// In C++, variables are declared with a type and a name (whereas python only uses a value and a name)
+// Ex:
+
+int Example; // Here we declare a variable that is an integer (it has a data type (int) and a name (Example))
+Example = 10; // Now we assign that variable a value (10)
+
+// Here is an example of how we could use this
+int age = 20;
+cout << "Age: " << age;
+
+// Another detail for variables
+int Age = 21;
+cout << "age: " << age << ", Age: " << Age; // These are two different variables because of the difference in capitalization
+
+// Rules for variables in C++
+// A variable MUST start with an underscore or a letter
+// A variable CANNOT start with a number
+// The characters in a variable CAN ONLY be alpha-numeric or an underscore
+// They are also case-sensitive
+
+// Aaron Jones - Data Types, Arithmetic, and Operators Worksheet
+
+// C++ Data Types
+// In C++ there are 3 data types: numbers, text (characters), and booleans (true/false)
+// 1. Numbers: int (integer), float (decimal), double (double-precision decimal)
+// 2. Text: char (character)
+// 3. Boolean: bool (true or false)
+
+// Ex:
+int a = 99999;
+char b = 'a';
+double c = 3.8;
+bool d = false;
+
+// In C++ you can check the type of data by using typeid()
+#include <typeinfo>
+// the above operator is a typeid operator, this allows us to use typeid() which allows you to get type info at runtime
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 99;
+    cout << typeid(x).name();
+    return 0;
+}
+
+// Now we will cover C++ Text (Characters)
+// Characters can be counted as letters, digits, or symbols and must be enclosed in quotes
+
+// Ex:
+char greeting = 'H'; // notice how this is a char because it is one letter
+string greeting2 = "Hi, my name is Aaron."; // this is a string because it is a sequence of characters
+
+// Numbers in C++
+// Numbers in C++ start with a digit (0-9), a dot (for decimal/floating-point numbers), or a minus sign (for negative numbers).
+// Integers (int) are whole numbers (no decimal)
+// Floating-point numbers/decimals (float/double) have a decimal
+
+// Integers
+// A whole number, positive or negative
+int b = 991874379235775387;
+
+// Floats and Doubles
+// A float or a double is any valid number that has a decimal 
+float p = 3.14;  // Float ex
+double e = 2.7182818284595342;  // Double ex
+
+// To explain the difference, floats typically have about 7 decimal digits of precision while doubles have about 15.
+
+// Boolean Values
+// Reminder: Booleans are NOT strings so no they don't need quotation marks
+
+bool ex1 = 10 > 9;  // returns 1
+bool ex2 = 10 == 9; // returns 0
+bool ex3 = 10 < 9;  // returns 0
+
+cout << boolalpha; // If you wanted to print out a boolean value rather than 1 or 0, you can use the boolalpha operator
+cout << ex1;
+cout << ex2;
+cout << ex3;
+
+// Casting data types in C++
+int i = 7; // Original data type is int
+double j = 4.2; // Original data type is double
+
+float w = static_cast<float>(i); // value changed -> is now: 7.0
+int q = static_cast<int>(k); // value changed -> is now: 4
+string l = to_string(k); // value changed -> is now: '4.2'
+
+cout << w << " " << q << " " << l;
+cout << typeid(w).name();
+cout << typeid(q).name();
+cout << typeid(l).name();
+
+// this would print out the new values of w, q, and l
+
+// Now C++ operators (these are very similar to python)
+
+// Arithmetic Operators
+
+// + Addition (x + y)
+
+// - Subtraction (x - y)
+
+// * Multiplication (x * y)
+
+// / Division (x / y)
+
+// % Modulus (x % y)
+
+// ** For exponents - (C++ does not have a built-in operator (like ** for python) for exponents, so instead use pow(x, y) from the <cmath> library)
+
+// // For floor division - (C++ does not have a built-in operator (like // for python) for floor division, so instead use floor(x / y) from the <cmath> library)
+
+cout << 1 + 3;
+cout << 2 * 3;
+cout << 6 / 2;
+
+// Assignment Operators
+
+int a = 5;    // Simple Assignment (assigns a value)
+
+a += 3;       // Add and Assign: a = a + 3;  -> a is now 8
+
+a -= 2;       // Subtract and Assign: a = a - 2;  -> a is now 6
+
+a *= 4;       // Multiply and Assign: a = a * 4;  -> a is now 24
+
+a /= 2;       // Divide and Assign: a = a / 2;  -> a is now 12
+
+a %= 5;       // Modulus and Assign: a = a % 5;  -> a is now 2
+
+// Comparison Operators
+
+// == equals (x == y)
+
+// != not equals (x != y)
+
+// > greater than (x > y)
+
+// < less than (x < y)
+
+// >= greater than or equal to (x >= y)
+
+// <= less than or equal to (x <= y)
+
+// All of these above return true or false
+
+cout << (10 != 8);
+cout << (12 >= 3);
+cout << (5 <= 5);
+
+// Different types of errors
+
+// Syntax errors/compile-time errors
+
+// int areaOfRectangle = 15 x 17; // has a missing operator
+
+// cout << "area is " << areaOfRectangle;
+
+// Logic error/run-time error
+int areaOfRectangle = 15 / 17; // here you're using the wrong logic for calculating area therefore error
+cout << "area is " << areaOfRectangle;
