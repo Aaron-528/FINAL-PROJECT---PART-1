@@ -3,3 +3,15 @@ Variables & Data Types Answers:
 1. bool example = true;
 2. 9
 3. There are 3 data types: numbers, text and boolean. 
+
+Inputs Answers:
+
+1.
+
+int time;
+cout << "What hour is it? ";
+cin >> time; // Takes input from user and stores it in time variable
+cout << time << endl;
+
+2. False
+3. False
