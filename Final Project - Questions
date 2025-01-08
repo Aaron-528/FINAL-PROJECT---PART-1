@@ -92,3 +92,48 @@ switch (car) {
     default:
         cout << "Invalid car" << endl;
 }
+
+Nested Conditional Statement Questions:
+
+1. What value would you need to assign x if you wanted the output "10 or below"?
+
+if (x > 10) {
+    cout << "X is above 10" << endl;
+    if (x > 20) {
+        cout << "X is above 20" << endl;
+    } else {
+        cout << "but not above 20" << endl;
+    }
+} else {
+    cout << "10 or below" << endl;
+}
+
+2. If the value assigned to score was 80, what would the output be?
+
+if (score > 90) {
+    cout << "Wow! You did excellent!" << endl;
+    if (score == 100) {
+        cout << "You got a perfect score!" << endl;
+    } else {
+        cout << "You got a near perfect score." << endl;
+    }
+} else if (score > 75) {
+    cout << "Good job." << endl;
+} else {
+    cout << "You need improvement." << endl;
+}
+
+3. What is the  output of the following code?
+
+int age = 17;
+int grade = 12;
+if (age < 18) {
+    cout << "Minor" << endl;
+    if (age >= 13 && grade >= 9) {
+        cout << "High school student" << endl;
+    } else {
+        cout << "Not a high school student" << endl;
+    }
+} else {
+    cout << "Adult" << endl;
+}
