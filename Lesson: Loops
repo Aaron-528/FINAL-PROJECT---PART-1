@@ -1,0 +1,101 @@
+// C++ Loops Worksheet
+
+// In C++, there are two types of loops (while and for)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // WHILE LOOPS (works the same as in python)
+    // Ex:
+    
+    int x = 10;
+    while (x < 53) { // while this is true
+        cout << x << endl; // this will print out the value of x
+        x += 3; // increments x by 3 (increases in value)
+    }
+    cout << "Loop done." << endl;
+
+    // You know the rules for while loops in python, the same applies to C++
+
+    // Break Statement
+    // The same rules apply to C++ 
+
+    // Ex:
+    
+    int n = 1;
+    while (n < 6) { // while this is true
+        if (n == 3) { // if condition, if condition fulfilled then follow indented line of codes step
+            break; // when n = to 3, leave loop (using break)
+        }
+        cout << n << endl; // prints out the value of n
+        n += 1; // increments n by 1 (increases in value)
+    }
+    cout << "Loop done." << endl;
+
+    // Continue statement
+    // Same rules apply to C++ 
+
+    // Ex
+    int a = 1;
+    while (a < 8) { // while this is true
+        if (a == 4) { // if condition
+            a += 1; // increment before continue to prevent an infinite loop
+            continue; // continue statement skips loop body and moves to next iteration
+        }
+        cout << a << endl; // prints out current value of a
+        a += 1; // increments a by 1
+    }
+    cout << "Loop done." << endl;   
+
+    // FOR LOOPS
+    // Same rules as python (used for iterating over a sequence, can execute a set of statements, runs a fixed number of loops, etc.)
+    
+    // Ex:
+    
+    string fruit = "pineapple"; // declares string variable named fruit and assigns it the name 
+    for (char x : fruit) { // this line means for each character in fruit, it assigns the character to the variable x
+        cout << x << endl; // this line prints the character followed by a newline so the string pineapple would print out vertically
+    }
+    cout << "Done" << endl;
+
+    // Break statement
+    
+    // Ex:
+    
+    for (int x = 1; x < 50; x++) { // starts with x = 1, and increments x by 1 so long as it is < 50.
+        if (x == 42) { // if statement to check if x = 42
+            cout << "Blah blah blah" << endl; // if x = 42, print text
+            break; // then terminate loop so it doesn't continue to the next iterations
+        }
+        cout << x << endl;
+    }
+    cout << "Loop done." << endl;
+
+    // Continue statement
+    
+    // Ex
+    
+    for (int x = 1; x < 75; x++) {
+        if (x == 42) {
+            cout << "Blah blah blah" << endl; // If x is 42, it will print the text and use the "continue" in the next line to skip directly move to the next iteration/
+            continue;
+        }
+        cout << x << endl;
+    }
+    cout << "Loop done." << endl;
+
+    // Nested Loops (same as python, loop in a loop, inner loop executed one time for each iteration of the outer loop, can be a loop in a dif type of loop)
+
+    // Ex
+    
+    for (int x = 1; x <= 5; x++) { // outer loop runs from 1-5
+        for (int y = 1; y <= x; y++) { // inner loop runs from (x)(y)
+            cout << "^"; // prints a "^"
+        }
+        cout << endl; // newline
+    }
+    
+        // Move the rest of the code to a separate function or file.
+        return 0;
+}
