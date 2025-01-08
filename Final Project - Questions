@@ -35,4 +35,25 @@ Inputs Questions:
 
 Arithmetic operators Questions:
 
-1. 
+1. What is the output of the code below?
+
+int num1 = 6;
+int num2 = 9;
+int num3 = 4;
+int result = (num1 + num2) * num3;
+cout << result;
+
+2. What is the output of the code below?
+
+double num1 = 45.0;
+double num2 = 5.0;
+double num3 = 2.0;
+double result = (num1 - num2) / num3;
+cout << result;
+
+3. What is the output of the code below?
+
+int x = 65;
+int y = 8;
+int result = x % y;
+cout << result;
