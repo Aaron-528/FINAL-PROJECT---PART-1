@@ -1,0 +1,158 @@
+// C++ Collections Worksheet
+
+#include <iostream>
+#include <vector>
+#include <list>
+#include <set>
+#include <map>
+#include <algorithm> // Added for find()
+using namespace std;
+
+int main() {
+    // C++ Collection Types
+    // There are multiple data types in C++ (some of which are similar to python)
+
+    // Vector - is ordered and changeable (allows duplicate entries).
+    // List - is ordered and allows duplicate entries (however they're different from Python lists).
+    // Set - is unordered and has unique entries.
+    // Map - is unordered and stores key-value pairs.
+
+    // Vectors
+    // A vector is any list of data that is separated by commas in angle brackets.
+    // You always assign a vector a name
+    // In a Vector, you are able to store multiple values, and access them in a sequence, by their position or index.
+
+    vector<string> names = {"aaron", "hayden", "omar", "daniel"}; // this is an example of a vector of strings
+    vector<int> numbers = {0, 100, 60, 999}; // this is an example of a vector of numbers
+
+    // Accessing a Vector
+    // To access an element in a vector, you would do it as you learned in python. vectorname[indice] (indices start from 0)
+
+    cout << names[0] << endl; // this would output aaron
+    cout << numbers[1] << endl; // this would output 100
+
+    // Similarly to python, you can count from the end using the at() method as well.
+    cout << names.at(names.size() - 1) << endl; // gives us daniel (last element)
+    cout << numbers.at(numbers.size() - 2) << endl; // gives us 60 (second last element)
+
+    // Vectors (as mentioned before) are changeable. You can modify elements, add elements to them or remove elements from them.
+    // Because they change dynamically, you do not need to manage their size.
+
+    names[3] = "andrew"; // Like in python, this assigns a new value to an already existing element
+    names.push_back("george"); // This would add a new element at the end of the vector
+    names.erase(names.begin() + 2); // This would remove an element using its index
+
+    // Lists
+    // Lists are like vectors, however, its faster to add and remove elements from, however they have slower random accessing as they don't support indexing.
+
+    // Ex:
+    list<int> numList = {1, 2, 3, 4, 5};
+
+    numList.push_back(6); // adds 6 to back
+    numList.push_front(0); // adds 0 to front
+
+    numList.pop_back(); // gets rid of 6
+    numList.pop_front(); // gets rid of 0
+
+    // This iterates through the list and prints each element
+    for (const int& number : numList) { // const indicates that int is a constant and the int& specifies that number is a reference to an int.
+        cout << number << " ";
+    }
+    cout << endl;
+
+    // Sets
+    // A set is a collection of unique elements
+    // Because it is a collection of unique elements, there cannot be multiple values that are the same, if duplicates are added they are deleted.
+    // They also do not have a specific order
+
+    // Ex:
+    set<string> nameSet = {"aaron", "hayden", "omar", "daniel", "aaron"};
+    for (const auto &name : nameSet) {
+        cout << name << " "; // however, because it is a set, it will not print out the same value twice (aaron should only be printed once)
+    }
+    cout << endl;
+
+    // Again, when printing a set, the order of the elements will be random.
+    // Because of this, items in a set do not have an index
+    // -> .sort() or .reverse() don't work.
+    // If you wanted to process the data in a set in a specific order, you would need to convert it into a vector or a list first
+
+    // Maps (Dictionaries in Python)
+    // Similar to lists except each item is not found by its position (or index) but by a key.
+    // Maps are used to store key-value pairs.
+    // Think of a map as two values, the first value is the key and the second value is the value for that key.
+    // To create a map, we put a comma-separated list of key-value pairs between curly brackets.
+
+    map<string, int> cards = {{"ace", 2}, {"club", 9}, {"diamond", 10}, {"heart", 5}};
+    map<string, string> student = {{"name", "aaron"}, {"age", "17"}};
+
+    // Keys of a map don't have to be a string - they can be anything as long as it is unique to each item in the map.
+    // Keys are also unique, meaning if repeated, the new value will replace the old one.
+
+    // MORE WORK WITH VECTORS
+    // How would we find the length of a vector
+    // We would use the size() method
+
+    // Ex:
+    cout << names.size() << endl;
+
+    // How would we remove elements in a vector
+    // We would use the erase() method
+    // Alternatively we could use the pop_back() method which removes the last element in a vector efficiently
+
+    vector<string> fruits = {"grapes", "coconut", "tangerine", "canary_melon", "mango", "pear", "watermelon"};
+    fruits.erase(fruits.begin() + 2); // This would remove "tangerine"
+    for (const auto &fruit : fruits) {
+        cout << fruit << " ";
+    }
+    cout << endl;
+    fruits.pop_back(); // Removes "watermelon"
+    for (const auto &fruit : fruits) {
+        cout << fruit << " ";
+    }
+    cout << endl;
+
+    // How would we add two vector lists
+    // Below is a method that you can use to directly combine two vectors
+
+    vector<int> list1 = {1, 2, 3};
+    vector<int> list2 = {9, 99, 999};
+    vector<int> list3 = list1;
+
+    list3.insert(list3.end(), list2.begin(), list2.end());
+
+    for (const auto &item : list3) {
+        cout << item << " ";
+    }
+    cout << endl;
+
+    // Lastly, how do we use C++ collections with loops
+    // for loop
+    vector<string> cars = {"mercedes", "toyota", "honda"};
+    for (const auto &car : cars) {
+        cout << car << " ";
+    }
+    cout << endl;
+
+    // Nested loops
+    vector<string> adj = {"tall", "short", "smart"};
+    names = {"aaron", "hayden", "omar"};
+    for (const auto &x : adj) {
+        for (const auto &y : names) {
+            cout << x << " " << y << endl;
+        }
+    }
+
+    // How to check if an item exists in C++ collections
+    // We can simply use find() from the <algorithm> library.
+
+    vector<string> cryptocoins = {"dogecoin", "ethereum", "bitcoin", "shibacoin", "memecoin", "derpcoin", "sigmacoin"};
+
+    if (find(cryptocoins.begin(), cryptocoins.end(), "ethereum") != cryptocoins.end()) {
+        cout << "Yes, ethereum is in the cryptocoin vector" << endl;
+
+    }
+    cout << endl;
+
+    return 0;
+}
