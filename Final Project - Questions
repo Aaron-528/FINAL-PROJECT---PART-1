@@ -232,3 +232,11 @@ Function Questions:
 
 List Questions:
 
+1. How would you add an element to the front and back of a list<int>?
+
+2. How would you add an element to the front and back of a list<string>?
+
+3. If given a list<int> called numbers, write a program that iterates through all the numbers
+
+2D List Questions:
+
