@@ -1,10 +1,10 @@
-Variables & Data Types Answers:
+Variables & Data Type Answers:
 
 1. bool example = true;
 2. 9
 3. There are 3 data types: numbers, text and boolean. 
 
-Inputs Answers:
+Input Answers:
 
 1.
 
@@ -16,8 +16,14 @@ cout << time << endl;
 2. False
 3. False
 
-Arithmetic operators Answers:
+Arithmetic operator Answers:
 
 1. 60
 2. 20
 3. 1
+
+Conditional statement (IF/ELIF/ELSE/Switches) Answers:
+
+1. x >= 14
+2. y < 532
+3. Hyundai
