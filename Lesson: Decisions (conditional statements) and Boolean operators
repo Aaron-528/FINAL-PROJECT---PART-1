@@ -1,0 +1,123 @@
+// Aaron Jones - C++ Logical Operators and Conditional Statements Worksheet
+
+// Comparison Operators (same as python)
+// == equals (a == b)
+// != not equals (a != b)
+// > greater than (a > b)
+// < less than (a < b)
+// >= greater than or equal to (a >= b)
+// <= less than or equal to (a <= b)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 69;
+    int b = 420;
+
+    // If-Statements in C++
+    
+    if (b > a) { // same as python - starts with "if", then an expression that's evaluated. If b > a, the code in the {} will execute
+        cout << "b is greater than a" << endl; // prints message
+        cout << endl; // newline character
+    }
+// "endl" is used to move the cursor to the beginning of the next line
+    
+    // Else statements in C++
+    
+    // Any lines of code indented under the else are executed only if the condition did not prove True.
+    if (b > a) {
+        cout << "b is greater than a" << endl;
+    } else {
+        cout << "a is greater than b" << endl; // If the condition b > a is false, then the else block will execute.
+    }
+
+    // Else If (or elif in Python)
+    // 'else if' in C++ is a way of saying 'if the previous condition(s) weren't true, then try this one'. 
+
+    if (b > a) {
+        cout << "b is greater than a" << endl;
+    } else if (a == b) {
+        cout << "a and b are equal" << endl; // This checks if a is equal to b (a == b) only if the first if condition (b > a) is false. If a is equal to b, then it will print "a and b are equal".
+    } else {
+        cout << "a is greater than b" << endl;
+    }
+
+    // Logical Operators in C++
+    // Logical operators combine conditional statements
+
+    // the 'and' operator (&&) returns the value True if both statements are true
+
+    // the 'or' operator (||) returns the value True if one of the statements is true
+
+    // the 'not' operator (!) reverses the value of the result; for example, it would return False if the result is true
+
+    // Ex:
+
+    int c = 500;
+    if (a > b && c > a) { // checks if both conditions are true
+        cout << "both conditions are true" << endl; // if condition satisfied, will print the text
+    }
+
+    // 'or' logical operator
+    if (a > b || c > a) { // checks if one of the conditions is true
+        cout << "at least one of the conditions is true" << endl; // if condition satisfied, will print the text
+    }
+
+    // 'not' logical operator
+    if (!(a > b && c > a) == false) { // This compares the negated result (opposite of the original condition's truth value) to false. Basically, it checks if a > b and c > a is true (since true == false is false, and false == false is true)
+        cout << "both conditions are false" << endl;
+    } else if (!(a > b || c > a) == false) {
+        cout << "one of the conditions is false" << endl;
+    }
+
+    // Nested Ifs
+    // (same as python, an if-statement inside an if-statement).
+    int x = 33;
+    if (x > 10) {
+        cout << "Above 10" << endl;
+        if (x > 20) {
+            cout << "Above 20" << endl;
+        } else {
+            cout << "but not above 20" << endl;
+        }
+    } else {
+        cout << "not above 10" << endl;
+    }
+    
+    // Switches in C++
+    // The switch statement in C++ is used to select a specific line of code to be executed.
+    // The format is shown below
+    
+    // Ex:
+    
+    int animal = 4;
+
+    switch (animal) {
+        case 1:
+            cout << "Lemur" << endl;
+            break;
+        case 2:
+            cout << "Gorilla" << endl;
+            break;
+        case 3:
+            cout << "Dog" << endl;
+            break;
+        case 4:
+            cout << "Tiger" << endl;
+            break;
+        case 5:
+            cout << "Godzilla" << endl;
+            break;
+        case 6:
+            cout << "Leopard" << endl;
+            break;
+        case 7:
+            cout << "Manta Ray" << endl;
+            break;
+        default:
+            cout << "Invalid animal" << endl;
+    }
+
+    return 0;
+}
