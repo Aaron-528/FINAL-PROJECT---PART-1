@@ -1,13 +1,5 @@
 // Aaron Jones - C++ Logical Operators and Conditional Statements Worksheet
 
-// Comparison Operators (same as python)
-// == equals (a == b)
-// != not equals (a != b)
-// > greater than (a > b)
-// < less than (a < b)
-// >= greater than or equal to (a >= b)
-// <= less than or equal to (a <= b)
-
 #include <iostream>
 using namespace std;
 
