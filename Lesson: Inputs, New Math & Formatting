@@ -1,0 +1,116 @@
+// Aaron Jones - C++ Input, Type, Floor Division/Modulus Math, and Formatting Worksheet
+
+#include <iostream>
+#include <typeinfo>
+#include <cmath> // for extra math
+#include <iomanip> // more formatting
+#include <sstream> // allows using stringstreams for formatting
+using namespace std;
+
+// Input
+
+// In C++ we use cin for input
+// After that, the input is stored in a variable to use whenever later in the code
+
+// Ex #1:
+int main() {
+
+    // Example #1:
+    int age;
+    cout << "How old are you? "; // Declares int variable
+    cin >> age; // Takes input from user and store it in age variable
+    cout << age << endl; // Prints value stored in age
+
+    // Example #2:
+    int x, y; // declares two integer variables (x & y)
+    cout << "Enter a number: "; // user enters a number for x
+    cin >> x; // stores value
+    cout << "Enter another number: "; // user enters a number for y
+    cin >> y; // stores value
+    cout << "x: " << x << endl; // prints value stored in x
+    cout << "y: " << y << endl; // prints value stored in y
+
+    // Type
+    // In C++ you can check the data type of a variable using typeid().name()
+    // the ouput will be a single char representing that
+    
+    cout << "Type of x: " << typeid(x).name() << endl;
+    cout << "Type of y: " << typeid(y).name() << endl;
+
+    // Floor Division (Integer Division)
+    int result = x / y;
+    cout << x << " divided by " << y << " = " << result << endl;
+
+    // Modulus
+    int remainder = x % y;
+    cout << x << " divided by " << y << " = " << result << " with remainder = to " << remainder << endl;
+
+    // More math functions in C++
+    // max(x, y) - gives back the larger number
+    // min(x, y) - gives back the smaller number
+    // round(x) - rounds the number 
+    cout << "Max: " << max(x, y) << endl; // gives the higher value whether x or y
+    cout << "Min: " << min(x, y) << endl; // gives the lower value whether x or y
+    cout << "Rounded x: " << round(x) << endl; // rounds the value of x
+
+    // Additional Math Functions
+    // In C++, other math functions can still be used, but you must get them from the math library
+    cout << "Ceiling of 4.3: " << ceil(4.3) << endl; // ceil function gives the smallest number greater than or equal to the number in the brackets
+    cout << "Floor of 4.7: " << floor(4.7) << endl; // floor function gives the largest number less than or equal to the number in the brackets
+    cout << "4 raised to the power of 2: " << pow(4, 2) << endl; // pow function gives the first number raised to the power of the second number 
+    cout << "Value of pi: " << M_PI << endl; // M_PI constant that represents the approximate value of pi
+
+    // Formatting Numbers
+    // In C++ to format numbers, you use stringstreams or printf
+    double unit_price = 768.99;
+    int quantity = 13;
+    stringstream ss; // creates stringstream
+    ss << fixed << setprecision(2); // gives 2 decimal places using setprecision
+    ss << "Total: $" << quantity * unit_price; // adds format to stringstream
+    cout << ss.str() << endl; // prints formatted total
+
+    // How to format percent numbers
+    double tax_rate = 0.13;
+    ss.str(""); // clear the stringstream
+    ss << "Tax Rate: " << fixed << setprecision(2) << tax_rate * 100 << "%";
+    cout << ss.str() << endl; // prints formatted tax rate
+
+    // Escape characters
+    cout << "Mr.\nHayden tells me \"I got a 49\\100\"\tI pray she's wrong!" << endl;
+
+    // \n -> new line
+    // \" -> prints a double quote 
+    // \\ -> prints a backslash
+    // \t -> tab
+
+    // Multiline Format Strings
+    // In C++ you make multiline strings by using stringstream or by concatenating multiple lines
+    stringstream output;
+    output << "Hi\n";
+    output << "my\n";
+    output << "name\n";
+    output << "is\n";
+    output << "Aaron";
+    cout << output.str() << endl;
+
+    // Other way
+    string output2 = "Hi\nmy\nname\nis\nAaron";
+    cout << output2 << endl;
+
+    // Formatting Width and Alignment
+    // You are able to control the width and alignment of your output using the "iomanip" library
+    unit_price = 58.97;
+    quantity = 4;
+    double sales_tax_rate = 0.067;
+    double subtotal = quantity * unit_price;
+    double sales_tax = sales_tax_rate * subtotal;
+    double total = subtotal + sales_tax;
+
+    cout << fixed << setprecision(2); // fixed function ensures numbers are printed in fixed point notation 
+    cout << "Sales Tax Rate: " << setw(10) << right << sales_tax_rate * 100 << "%" << endl;
+    cout << "Subtotal:       $" << setw(9) << right << subtotal << endl; // setw() sets width of the output field
+    cout << "Sales Tax:      $" << setw(9) << right << sales_tax << endl;
+    cout << "Total:          $" << setw(9) << right << total << endl;
+
+    return 0;
+}
