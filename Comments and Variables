@@ -1,0 +1,53 @@
+// Aaron Jones - C++ Variables Worksheet
+
+// Intro
+// Def'n': C++ is coding language used to build software for things like video games, OS', databases, etc.
+
+// Coding
+
+// Our First C++ Program
+#include <iostream> // handles input/output
+using namespace std;
+
+int main() {
+    cout << "Hello, World!";
+    return 0;
+}
+
+// C++ Comments
+// Single-line comments use // (double forward slashes)
+// Multi-line comments use /*...*/ (forward slash asterisk and asterisk forward slash)
+
+// Syntax in C++
+// C++ uses curly braces -> {} <- to show blocks of code. This is different from Python which uses indentation.
+// C++ also needs semicolons -> ; <- to end statements.
+// Ex:
+if (condition) {
+    cout << "Condition is true"; // This line is inside the if-statement.
+}
+cout << "This line is outside the if-statement";
+
+// C++ Variables
+// In C++, variables are declared with a type and a name.
+// Ex:
+int myVariable; // Declaring a variable that is an integer
+myVariable = 10; // Giving a value to that variable
+
+// Usage ex:
+int age = 20;
+cout << "Age: " << age << endl; // Added 'endl' for better formatting
+
+// C++ Variables are also case-sensitive
+int Age = 21;
+cout << "age: " << age << ", Age: " << Age << endl; // Added 'endl' for better formatting
+
+// C++ Variable Rules
+// Must start with a letter or an underscore character.
+// CANNOT start with a number.
+// Can only be alpha-numeric characters and underscores (A-Z, a-z, 0-9, and _).
+// Are case-sensitive.
+
+// Types of naming in C++
+// Camel Case: firstName // Each word, except the first, begins with a capital letter
+// Pascal Case: FirstName // Each word begins with a capital letter
+// Snake Case: first_name or First_Name // Each word is separated by an underscore
