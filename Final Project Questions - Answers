@@ -38,3 +38,120 @@ Compound Boolean Expression Answers:
 1. Both conditions = true
 2. At least one of the conditions = true
 3. At least one of the conditions = true
+
+While Loop Answers:
+
+1. 10 8 6 4 2 0 -2
+2. True
+3. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int sum = 0;
+    int z = 1;
+    while (z <= 10) {
+            sum += z;
+        }
+        z++;
+    }
+    cout << "The sum of all numbers between 1 and 10 is: " << sum << endl;
+    return 0;
+}
+
+For Loop Answers:
+
+
+1. 1 4 9 16
+2. True
+3.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+Nested Loop Answers:
+
+1. 
+
+12
+24
+36
+
+2. False
+
+3.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int a = 1; a <= 3; a++) {
+        for (int b = 1; b <= 3; b++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+Function Answers:
+
+1.
+
+#include <iostream>
+using namespace std;
+
+void example() {
+    cout << "Hello, world!" << endl;
+}
+
+int main() {
+    example();
+    return 0;
+}
+
+2.
+
+#include <iostream>
+using namespace std;
+
+int addition(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int sum = addition(5, 3);
+    cout << "The 2 digits' sum is " << sum << endl;
+    return 0;
+}
+
+3. False
+
+List Answers:
+
+1. using the push_back() and push_front() function
+2. using the pop_back() and pop_front() function
+
+3.
+
+for (const int& number : numbers) {
+    cout << number << " ";
+}
+cout << endl;
+
+2D List (Vector) Answers:
+
+1. 5
+
+2. False
+
+3.     matrix[1][1] = 10; 
