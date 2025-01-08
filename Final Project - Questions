@@ -1,0 +1,28 @@
+Variables & Data Types Questions:
+
+1. How do we properly declare a Boolean variable and give it a value = to true?
+
+a) example = bool true;
+
+b) example = "true";
+
+c) bool example = "true";
+
+d) bool example = true;
+
+2. What is the ouput of the following code?
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float x = 6;
+    float y = 3.9;
+    int result = x + static_cast<int>(y);
+    cout << result;
+    return 0;
+}
+
+
+3. 
+
