@@ -1,12 +1,5 @@
 // Aaron Jones - Data Types, Arithmetic, and Operators Worksheet
 
-// You can check a variable type using typeid()
-#include <typeinfo>
-#include <iostream>
-#include <string>   // Added for using string
-#include <cmath>    // Added for using pow function
-using namespace std;
-
 // C++ Data Types
 // In C++ there are 3 different data types: numbers, text (characters), and booleans (true/false)
 // Numbers: int (integer), float (decimal), double (double-precision decimal)
@@ -14,107 +7,101 @@ using namespace std;
 // Boolean: bool (true or false)
 
 // Ex:
-int w = 1;
-char x = 'h';
-double y = 4.4;
-bool z = true;
+int a = 1;
+char b = 'c';
+double d = 4.4;
+bool e = true;
 
-int main() {
-    int x = 10;
-    cout << typeid(x).name() << endl;
+// C++ Text (Characters)
+// Characters are letters, digits, or symbols
+// Characters have to be enclosed in quotes
+// For strings, we use the string class from the C++ Library
 
-    // C++ Text (Characters)
-    // Characters are letters, digits, or symbols
-    // Characters have to be enclosed in quotes
-    // For strings, we use the string class from the C++ Library
+// Ex:
+char greeting = 'H'; //(one character)
+string greeting2 = "Hi, my name is Aaron."; // string ex
 
-    // Ex:
-    char greeting = 'H'; //(one character)
-    string greeting2 = "Hi, my name is Aaron."; // string ex
+// C++ Numbers
+// Numbers in C++ start with a digit (0-9), a dot (for decimal/floating-point numbers), or a minus sign (for negative numbers).
+// Integers (int) are whole numbers (no decimal)
+// Floating-point numbers/decimals (float/double) have a decimal
 
-    // C++ Numbers
-    // Numbers in C++ start with a digit (0-9), a dot (for decimal/floating-point numbers), or a minus sign (for negative numbers).
-    // Integers (int) are whole numbers (no decimal)
-    // Floating-point numbers/decimals (float/double) have a decimal
+// Integers
+// A whole number, positive or negative
+int x = 10;
 
-    // Integers
-    // A whole number, positive or negative
-    int y = 11;
+// Floats and Doubles
+// Any valid number that has a decimal 
+float g = 2.87;  // Float ex
+double f = 2.718281828459;  // Double ex
 
-    // Floats and Doubles
-    // Any valid number that has a decimal 
-    float pi = 3.14f;  // Float ex
-    double e = 2.718281828459;  // Double ex
+//double typically is a more precise version of a float
 
-    // Boolean Values
-    // Booleans aren't strings so no quotation marks
+// Boolean Values
+// Booleans aren't strings so no quotation marks
 
-    bool result1 = 10 > 9;  // returns true
-    bool result2 = 10 == 9; // returns false
-    bool result3 = 10 < 9;  // returns false
+bool result1 = 10 > 9;  // returns true
+bool result2 = 10 == 9; // returns false
+bool result3 = 10 < 9;  // returns false
 
-    cout << boolalpha; // To print bool values as true/false instead of 1/0
-    cout << result1 << endl;
-    cout << result2 << endl;
-    cout << result3 << endl;
+cout << boolalpha; // To print bool values as true/false instead of 1/0
+cout << result1;
+cout << result2;
+cout << result3;
 
-    // How to cast data types
-    int j = 1; // Original data type is integer
-    double k = 2.8; // Original data type is double
+// How to cast data types
+int j = 1; // Original data type is integer
+double k = 2.8; // Original data type is double
 
-    float w = static_cast<float>(j); // value changed -> is now: 1.0
-    int q = static_cast<int>(k); // value changed -> is now: 2
+float w = static_cast<float>(j); // value changed -> is now: 1.0
+int q = static_cast<int>(k); // value changed -> is now: 2
+string l = to_string(k); // value changed -> is now: '2.8'
 
-    cout << fixed << w << " " << q << endl; // fixed makes sure that the floating-point value is printed in fixed-point notation.
-    cout << typeid(w).name() << endl;
-    cout << typeid(q).name() << endl;
+// --C++ Operators--
 
-    // --C++ Operators--
+// Arithmetic Operators
 
-    // Arithmetic Operators
+// + Addition (x + y)
 
-    // + Addition (x + y)
-    int addition = x + 2;
-    cout << "Addition: " << addition << endl;
+// - Subtraction (x - y)
 
-    // - Subtraction (x - y)
-    int subtraction = x - 2;
-    cout << "Subtraction: " << subtraction << endl;
+// * Multiplication (x * y)
 
-    // * Multiplication (x * y)
-    int multiplication = x * 2;
-    cout << "Multiplication: " << multiplication << endl;
+// / Division (x / y)
 
-    // / Division (x / y)
-    double division = static_cast<double>(x) / 2; // Casting to double for accurate division
-    cout << "Division: " << division << endl;
+// % Modulus (x % y)
 
-    // % Modulus (x % y)
-    int modulus = x % 3;
-    cout << "Modulus: " << modulus << endl;
+// ** For exponents - (C++ does not have a built-in operator (like ** for python) for exponents, so instead use pow(x, y) from the <cmath> library)
 
-    // ** For exponents - (C++ does not have a built-in operator (like ** for python) for exponents, so instead use pow(x, y) from the <cmath> library)
-    double exponent = pow(x, 2);
-    cout << "Exponent: " << exponent << endl;
+// // For floor division - (C++ does not have a built-in operator (like // for python) for floor division, so instead use floor(x / y) from the <cmath> library)
 
-    // Assignment Operator
-    // = assigns values to variables (similar to python)
+cout << 4 + 3;
+cout << 62 * 8;
+cout << 9 / 3;
 
-    int t = 8;
+// Assignment Operator
 
-    // Comparison Operators
+// = assigns values to variables (similar to python)
 
-    // == equals (x == y)
-    // != not equals (x != y)
-    // > greater than (x > y)
-    // < less than (x < y)
-    // >= greater than or equal to (x >= y)
-    // <= less than or equal to (x <= y)
+int t = 15;
 
-    // All of these above return true or false
-    cout << (10 != 8) << endl;
-    cout << (12 >= 3) << endl;
-    cout << (5 <= 5) << endl;
+// Comparison Operators
 
+// == equals (x == y)
 
-}
+// != not equals (x != y)
+
+// > greater than (x > y)
+
+// < less than (x < y)
+
+// >= greater than or equal to (x >= y)
+
+// <= less than or equal to (x <= y)
+
+// All of these above return true or false
+
+cout << (11 != 5);
+cout << (14 >= 6);
+cout << (8 <= 8);
+
