@@ -1,6 +1,6 @@
 // C++ Loops Worksheet
 
-// In C++, there are two types of loops (while and for)
+// In C++, there are three types of loops (while, for and do-while)
 
 #include <iostream>
 using namespace std;
@@ -83,6 +83,22 @@ int main() {
         }
         cout << x << endl;
     }
+    cout << "Loop done." << endl;
+
+    // DO - WHILE LOOPS
+    // In a do-while loop, the loop body executes at least once before the condition is tested.
+    // Syntax: 
+    // do {
+    //    // loop body
+    // } while (condition);
+
+    // Ex:
+    
+    int d = 5;
+    do {
+        cout << d << endl; // prints out the value of d
+        d += 1; // increments d by 1
+    } while (d < 10); // loop continues as long as this condition is true
     cout << "Loop done." << endl;
 
     // Nested Loops (same as python, loop in a loop, inner loop executed one time for each iteration of the outer loop, can be a loop in a dif type of loop)
