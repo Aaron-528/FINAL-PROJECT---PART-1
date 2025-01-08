@@ -1,10 +1,10 @@
-// C++ Collections Worksheet
+// Aaron Jones - C++ Collections Worksheet
 
 #include <iostream>
 #include <vector>
 #include <list>
 #include <set>
-#include <map>
+#include <map> // so we can use map function
 #include <algorithm> // Added for find()
 using namespace std;
 
@@ -20,7 +20,7 @@ int main() {
     // Vectors
     // A vector is any list of data that is separated by commas in angle brackets.
     // You always assign a vector a name
-    // In a Vector, you are able to store multiple values, and access them in a sequence, by their position or index.
+    // In a Vector, you can store multiple values, and access them in a sequence, by their position or index.
 
     vector<string> names = {"aaron", "hayden", "omar", "daniel"}; // this is an example of a vector of strings
     vector<int> numbers = {0, 100, 60, 999}; // this is an example of a vector of numbers
@@ -153,6 +153,31 @@ int main() {
 
     }
     cout << endl;
+
+    // 2D lists in C++
+    // Although C++ does not have native 2D lists, you can emulate them using 2D Vectors
+    // A 2D vector is a vector of other vectors
+    // This allows you to create something like a grid.
+    
+    // Declaring and initializing a 2D vector with 3 rows and 3 columns 
+    
+    vector<vector<int>> matrix = { 
+            {1, 2, 3}, 
+            {4, 5, 6}, 
+            {7, 8, 9} 
+        
+    }; 
+    
+    // Accessing and modifying elements in a 2D vector 
+    matrix[1][2] = 10; // Change the element at the second row, third column to 10 
+    
+    // Printing all elements of the 2D vector using nested loops 
+    for (const auto& row : matrix) { 
+        for (const auto& elem : row) { 
+            cout << elem << " ";
+        } 
+        cout << endl;
+    }
 
     return 0;
 }
