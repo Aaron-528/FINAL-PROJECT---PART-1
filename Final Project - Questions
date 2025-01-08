@@ -238,5 +238,14 @@ List Questions:
 
 3. If given a list<int> called numbers, write a program that iterates through all the numbers
 
-2D List Questions:
+2D List (Vector) Questions:
 
+1. Given the vector below, what is the element at (matrix[1][1])?
+
+{1, 2, 3}, 
+{4, 5, 6}, 
+{7, 8, 9}
+
+2. True or False: 2D vectors of strings do not exist.
+
+3. Modify the element at (matrix[1][1]) to another element of your choosing.
