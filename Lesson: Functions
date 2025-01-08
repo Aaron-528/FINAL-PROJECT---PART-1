@@ -1,0 +1,83 @@
+// Aaron Jones - C++ Functions Worksheet
+
+#include <iostream>
+using namespace std;
+
+// Functions
+// Same rules as functions in Python, however, they are written differently.
+
+// Making a Function in C++
+// In C++, functions are defined with the return type (type of data), the function name, and the parameters in parentheses (similar to Python).
+
+void Example() { // This defines a function named Example that has no return value (which is why we use "void" for the return type) and no parameters.
+    cout << "Hi." << endl; // example inside function
+}
+
+// Same rules apply again (don't define a function within a function and all function definitions should be stand-alone. But, you can call another function inside a function.)
+
+// Ex of what NOT to do ->
+/*
+void functionOne() {
+    cout << "no" << endl;
+    void functionTwo() {
+        cout << "no!" << endl;
+    }
+}
+*/
+// this works but it is improper formatting (DONT DO)
+
+// Instead do this below and separate the two functions
+
+void functionOne() { // Definition of functionOne
+    cout << "hi" << endl;
+}
+
+void functionTwo() { // Definition of functionTwo
+    functionOne();
+    cout << "hihi" << endl;
+}
+
+// ARGUMENTS/PARAMETERS
+// Same as python (A parameter or an argument = the information that is passed into a function.)
+// We visually see the parameter as the variable thats inside the brackets when you define a function
+// An argument = the value that is sent to the function when it's called
+// Rest of the rules from python apply (# of argument, keyboard arguments, local and global scope, etc.)
+
+void greet(string fname) { // void indicates that the function "greet" does not return a value and string fname is a parameter
+    cout << "Yo " << fname << endl; // prints string and value of fname
+}
+
+int multiplyBySixty(int x) { // this defines a function called multiplyBySixty that takes one integer parameter (in this case x) and returns an integer
+    return 60 * x; // multiplies the parameter x by 60 and returns a value
+}
+
+int factorial(int n) { // defines a function called factorial, takes an integer called n and returns the factorial of itself
+    if (n > 1) { // base case when n <= 1, returns 1
+        int result = n * factorial(n - 1); // recursive case n * factorial(n-1)
+        cout << "Factorial of " << n << " is " << result << endl; // prints result
+        return result;
+    } else {
+        return 1;
+    }
+}
+
+int main() {
+    cout << "Bye." << endl; // example outside function
+
+    Example(); // this calls the function
+
+    functionOne(); // call to functionOne
+    functionTwo(); // call to functionTwo
+
+    greet("Aaron"); // the strings inside are arguments so you would call the function and it would print "Yo" and in this case "Aaron"
+    greet("Hayden");
+    greet("Omar");
+
+    cout << multiplyBySixty(2) << endl; // gives 120 and a newline
+    cout << multiplyBySixty(6) << endl; // gives 360 and a newline
+    cout << multiplyBySixty(34) << endl; // gives 2040 and a newline
+
+    cout << "Factorial of 5 is " << factorial(5) << endl; // call to factorial and print the result
+
+    return 0; // indicate that program ended successfully
+}
