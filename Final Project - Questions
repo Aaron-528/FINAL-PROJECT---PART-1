@@ -137,3 +137,25 @@ if (age < 18) {
 } else {
     cout << "Adult" << endl;
 }
+
+Compound Boolean Expression Questions: 
+
+1. What will be printed if x = 4, y = 3 and z = 3?
+
+if (x > y && z > x) {
+    cout << "Both conditions = true" << endl;
+}
+
+2. What will be printed if x = 1000, y = 15000 and z = 1?
+
+if (x > y || z < y) {
+    cout << "At least one of the conditions = true" << endl;
+}
+
+3. What will be printed if x = 2, y = 2 and z = 3?
+
+if (!(x < y && z > x)) {
+    cout << "Both conditions = false" << endl;
+} else {
+    cout << "At least one of the conditions = true" << endl;
+}
