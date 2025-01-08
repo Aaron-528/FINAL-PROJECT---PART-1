@@ -1,4 +1,4 @@
-Variables & Data Types Questions:
+Variables & Data Type Questions:
 
 1. How do we properly declare a Boolean variable and give it a value = to true?
 
@@ -25,7 +25,7 @@ int main() {
 
 3. What are the different data types in C++?
 
-Inputs Questions:
+Input Questions:
 
 1. How do you use the cin object in C++ to receive an input?
 
@@ -33,7 +33,7 @@ Inputs Questions:
 
 3. True or false: cin can only be used to take input for one variable at a time?
 
-Arithmetic operators Questions:
+Arithmetic operator Questions:
 
 1. What is the output of the code below?
 
@@ -57,3 +57,38 @@ int x = 65;
 int y = 8;
 int result = x % y;
 cout << result;
+
+Conditional statement (IF/ELIF/ELSE/Switches) Questions:
+
+1. If the value of x is set to 15, what will print?
+
+if (x >= 14) {
+        cout << "x >= 14" << endl;
+}
+
+2. If the value of y is 20, what will print?
+
+if (y > 532) {
+    cout << "y > 532 << endl;
+} else if (y == 532) {
+    cout << "y = 532" << endl;
+} else {
+    cout << "y < 532" << endl;
+}
+
+3. If the value of car is 2, what will print?
+
+int car = 2;
+switch (car) {
+    case 1:
+        cout << "Honda" << endl;
+        break;
+    case 2:
+        cout << "Hyundai" << endl;
+        break;
+    case 3:
+        cout << "Toyota" << endl;
+        break;
+    default:
+        cout << "Invalid car" << endl;
+}
