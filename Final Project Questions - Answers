@@ -27,3 +27,11 @@ Conditional statement (IF/ELIF/ELSE/Switches) Answers:
 1. x >= 14
 2. y < 532
 3. Hyundai
+
+Nested Conditional Statement Answers:
+
+1. Any int value that is = to 10 or < 10
+2. The output would be "Good job."
+3. The output is "Minor \nHigh school student"
+
+
