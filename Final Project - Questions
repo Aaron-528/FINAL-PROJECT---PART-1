@@ -27,4 +27,9 @@ int main() {
 
 Inputs Questions:
 
+1. How do you use the cin object in C++ to receive an input?
+
+2. True or False: You should never declare variables before using cin to take inputs?
+
+3. True or false: cin can only be used to take input for one variable at a time?
 
