@@ -224,3 +224,11 @@ for (int a = 0; a < 2; a++) {
 
 Function Questions:
 
+1. Write a function and name it what you want. Make sure it prints "Hello, world!". Call it from the main function.
+
+2. Write a function and call it addition. The function should take two integer parameters and gives their sum. Call it from main and print the result.
+
+3. True or false: The return type for a function in C++ is always void.
+
+List Questions:
+
