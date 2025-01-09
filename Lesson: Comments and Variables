@@ -7,10 +7,10 @@
 
 // Our First C++ Program
 #include <iostream> // handles input/output
-using namespace std;
+using namespace std; // namespace is a way to group together related functions, classes, variables, and other symbols. For us, it lets us call cout with having to write std::cout
 
 int main() {
-    cout << "Hello, World!";
+    cout << "Hello, World!"; // cout is a function in <iostream> to handle output
     return 0;
 }
 
