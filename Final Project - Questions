@@ -264,7 +264,20 @@ Function Questions:
 
 2. Write a function and call it addition. The function should take two integer parameters and gives their sum. Call it from main and print the result.
 
-3. True or false: The return type for a function in C++ is always void.
+3. What is the output of this code?
+
+#include <iostream>
+using namespace std;
+
+void greet(string fname) {
+    cout << "Yo you suck, " << fname << "!" << endl;
+}
+
+int main() {
+    greet("Hayden");
+    greet("Omar");
+    return 0;
+}
 
 List Questions:
 
