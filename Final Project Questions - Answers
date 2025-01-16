@@ -203,7 +203,20 @@ Yo you suck Omar!
 List Answers:
 
 1. using the push_back() and push_front() function
+
+ex: 
+
+list<int> numList = {9, 8, 7, 6, 5};
+numList.push_back(4); 
+numList.push_front(10);
+
 2. using the pop_back() and pop_front() function
+
+ex:
+
+list<string> stringList = {"kiwi", "tangerine", "watermelon"};
+stringList.push_front("banana");
+stringList.push_back("blueberries");
 
 3.
 
