@@ -26,9 +26,25 @@ Input Questions:
 
 1. How do you use the cin object in C++ to receive an input?
 
-2. True or False: You should never declare variables before using cin to take inputs?
+2. What is the output of the following code if the user enters 99?
 
-3. True or false: cin can only be used to take input for one variable at a time?
+int age;
+cout << "How old are you? ";
+cin >> age;
+cout << age << endl;
+
+3. What is the output of the following output of the code if the user enters 4 for x and 5 and y?
+
+int x, y;
+cout << "Enter a number: ";
+cin >> x;
+cout << "Enter another number: ";
+cin >> y;
+cout << "x: " << x << endl;
+cout << "y: " << y << endl;
+int result = x / y;
+int remainder = x % y;
+cout << x << " divided by " << y << " = " << result << " with remainder = " << remainder << endl;
 
 Arithmetic Operator Questions:
 
