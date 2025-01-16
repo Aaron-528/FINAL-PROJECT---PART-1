@@ -1,8 +1,28 @@
 Variables & Data Type Answers:
 
-1. bool example = true;
+1. 55.9017
 2. 9
-3. There are 3 data types: numbers, text and boolean. 
+3. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1 = 99;
+    float num2 = 9.9;
+
+    float sum = num1 + num2;
+    float difference = num1 - num2;
+    float product = num1 * num2;
+    float quotient = num1 / num2;
+
+    cout << "Sum: " << sum << endl;
+    cout << "Difference: " << difference << endl;
+    cout << "Product: " << product << endl;
+    cout << "Quotient: " << quotient << endl;
+
+    return 0;
+}
 
 Input Answers:
 
