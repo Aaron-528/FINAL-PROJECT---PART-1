@@ -207,11 +207,24 @@ for (int a = 0; a < 5; a++) {
     cout << a * a << " ";
 }
 
-2. True or False: The output of this code is h a y d e n
+2. What is the output of this code
 
-string word = "hayden";
-for (char c : word) {
-    cout << c << " ";
+#include <iostream>
+using namespace std;
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string fruit = "pineapple";
+    for (char i : fruit) {
+        if (i == 'a') {
+            continue;
+        }
+        cout << i;
+    }
+    cout << endl << "yum yum" << endl;
+    return 0;
 }
 
 3. Code a program that prints the numbers from 1-10 in a sequence:
