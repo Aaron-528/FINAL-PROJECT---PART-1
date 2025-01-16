@@ -1,14 +1,11 @@
 Variables & Data Type Questions:
 
-1. How do we properly declare a Boolean variable and give it a value = to true?
+1. What is the output of this code?
 
-a) example = bool true;
-
-b) example = "true";
-
-c) bool example = "true";
-
-d) bool example = true;
+int a = 5;
+double b = 2.5;
+double result = pow(a, b);
+cout << result;
 
 2. What is the ouput of the following code?
 
@@ -23,7 +20,7 @@ int main() {
     return 0;
 }
 
-3. What are the different data types in C++?
+3. Write a program that declares an int and float variable with values of your choice. Calculate the sum, difference, product, and quotient of these two variables and the print out the values.
 
 Input Questions:
 
