@@ -240,17 +240,20 @@ for (int x = 1; x <= 3; x++) {
     cout << endl;
 }
 
-2. True or False: the output for this code is "Equal Equal Not equal Not equal"
+2. What is the ouput of this code?
 
-for (int a = 0; a < 2; a++) {
-    for (int b = 0; b < 2; b++) {
-        if (a == b) {
-            cout << "Equal ";
-        } else {
-            cout << "Not equal ";
+#include <iostream>
+using namespace std;
+
+int main() {
+    string word = "HAYDENSUCKS";
+    for (int i = 0; i < word.length(); i++) {
+        for (int x = 0; x <= i; x++) {
+            cout << word[x];
         }
+        cout << endl;
     }
-    cout << endl;
+    return 0;
 }
 
 3. Code a program to make a 3x3 square of asterisks.
